@@ -1,0 +1,84 @@
+/* ========================================
+   🎨 HEADER CSS MODULE
+   ======================================== */
+
+.header {
+  @apply w-full bg-[#01818E] text-white shadow-md;
+}
+
+.headerGradient {
+  @apply w-full py-6 px-0 bg-gradient-to-r from-[#01818E] to-cyan-400 shadow-lg;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  @apply flex flex-col md:flex-row items-start md:items-center justify-between gap-y-6 gap-x-10 px-6 sm:px-10 py-8 sm:py-10;
+}
+
+.logoSection {
+  @apply flex items-start gap-4 md:gap-6;
+}
+
+.logo {
+  @apply h-16 w-auto md:h-20 object-contain rounded-xl shadow-lg;
+}
+
+.greeting {
+  @apply flex flex-col;
+}
+
+.title {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-snug tracking-tight drop-shadow-sm;
+}
+
+.titleGlow {
+  @apply text-3xl md:text-4xl font-extrabold text-white;
+  text-shadow: 0 2px 16px rgba(1,129,142,0.25), 0 1px 2px rgba(0,0,0,0.12);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  @apply text-base sm:text-lg md:text-2xl text-teal-100 font-light mt-1 sm:mt-2;
+}
+
+.underlineGradient {
+  @apply mt-2 mb-2 h-1 w-24 rounded-full;
+  background: linear-gradient(90deg, #01818E 0%, #22d3ee 100%);
+}
+
+.actions {
+  @apply flex items-center gap-4 md:gap-6 ml-auto;
+}
+
+.actionsGlassy {
+  @apply flex items-center gap-3 px-4 py-2 rounded-full bg-white/30 backdrop-blur-md shadow-md;
+  border: 1px solid rgba(1,129,142,0.10);
+}
+
+/* Animation */
+.fadeInUp {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    @apply flex-col items-start;
+  }
+
+  .actions {
+    @apply w-full justify-center;
+  }
+} 

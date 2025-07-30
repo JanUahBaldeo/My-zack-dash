@@ -1,0 +1,66 @@
+/* ========================================
+   🎨 DASHBOARD CSS MODULE
+   ======================================== */
+
+.container {
+  @apply w-full min-h-screen text-gray-800 text-base md:text-lg;
+  background: linear-gradient(120deg, #01818E 0%, #22d3ee 100%);
+  /* Subtle pattern overlay for depth */
+  background-blend-mode: overlay;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.main {
+  @apply flex flex-col gap-8 px-0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.section {
+  @apply px-0;
+  background: #fff;
+  backdrop-filter: blur(2px);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(1,129,142,0.07);
+  margin-bottom: 2.5rem;
+}
+
+.sectionPipeline {
+  @apply pt-1;
+  background: #fff;
+  box-shadow: 0 8px 32px 0 rgba(1,129,142,0.10);
+}
+
+.sectionCampaign, .sectionTasks, .sectionCalendar {
+  @apply pt-6;
+  background: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .main {
+    @apply px-1;
+  }
+
+  .section {
+    @apply px-1;
+  }
+}
+
+/* Animation Classes */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
